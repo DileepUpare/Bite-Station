@@ -1,6 +1,5 @@
 import { useMediaQuery } from 'react-responsive'; 
 import { motion } from "framer-motion";
-import LocomotiveScroll  from "locomotive-scroll";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 
 // Import images
@@ -23,7 +22,6 @@ import Image16 from "../Assets/images/Parallax-images/pexels-vince-2147491.webp"
 import Image17 from "../Assets/images/Parallax-images/pexels-vincent-ma-janssen-2302809.webp";
 
 const HomePage = () => {
-  const locomotiveScroll = new LocomotiveScroll();
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' }); // Define media query for desktop/laptop screens
 
   return (
