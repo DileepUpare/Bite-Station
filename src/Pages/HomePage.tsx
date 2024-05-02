@@ -1,6 +1,8 @@
+import { useEffect, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive'; 
 import { motion } from "framer-motion";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
+import LocomotiveScroll from 'locomotive-scroll'; 
 
 // Import images
 import Image1 from "../Assets/images/Parallax-images/pexels-barfisch-pix-115740.webp";
@@ -22,7 +24,20 @@ import Image16 from "../Assets/images/Parallax-images/pexels-vince-2147491.webp"
 import Image17 from "../Assets/images/Parallax-images/pexels-vincent-ma-janssen-2302809.webp";
 
 const HomePage = () => {
+  const containerRef = useRef<HTMLDivElement>(null!); // UseRef with type HTMLDivElement and type assertion
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' }); // Define media query for desktop/laptop screens
+
+  useEffect(() => {
+    if (isDesktopOrLaptop && containerRef.current) { // Checking if containerRef.current exists
+      const locomotiveScroll = new LocomotiveScroll({
+        el: containerRef.current.querySelector('[data-scroll-container]') as HTMLElement, // Use type assertion to assert it as HTMLElement
+        smooth: true,
+      });
+      return () => {
+        locomotiveScroll.destroy();
+      };
+    }
+  }, [isDesktopOrLaptop]);
 
   return (
     <div className="flex flex-col gap-12 overflow-hidden">
@@ -38,7 +53,7 @@ const HomePage = () => {
       <div  data-scroll  data-scroll-speed='-0.1' className="w-full p-20 bg-black rounded-3xl  text-white">
         <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">Find Restaurants which serve best food nearby you.</h1>
         {isDesktopOrLaptop && ( // Render ParallaxScroll only for desktop/laptop screens
-          <div className="w-full mt-10 object-fit scroll-smooth ">
+          <div className="w-full mt-10 object-fit scroll-smooth " ref={containerRef}>
             <div className="w-full">
               <ParallaxScroll 
                 images={[Image1, Image2, Image3, Image4, Image5,
