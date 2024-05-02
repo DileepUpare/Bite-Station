@@ -9,21 +9,26 @@ const UsernameMenu = () => {
     const {user, logout} = useAuth0();
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
+            <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-black gap-2">
                 <Avatar>
                     <AvatarImage src={user?.picture} />
                 </Avatar>
 
             </DropdownMenuTrigger>
             <DropdownMenuContent>
+            <DropdownMenuItem>
+                <Link to="/manage-restaurant" className="font-medium hover:text-black">
+                  Manage Restaurant
+                </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem>
-                <Link to="/user-profile" className="font-medium hover:text-orange-500">
+                <Link to="/user-profile" className="font-medium hover:text-black">
                   User Profile
                 </Link>
                 </DropdownMenuItem>
                 <Separator/>
                 <DropdownMenuItem>
-                    <Button onClick={()=>logout()} className="flex flex-1 font-bold bg-orange-500">
+                    <Button onClick={()=>logout()} className="flex flex-1 font-bold bg-black">
                     Log Out
                     </Button>
                 </DropdownMenuItem>

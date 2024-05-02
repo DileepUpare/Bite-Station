@@ -3,13 +3,16 @@ import { Button } from "./ui/button";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const MobileNavLinks = () => {
-    const { logout } = useAuth0();
+  const { logout } = useAuth0();
   return (
     <>
-      <Link to="/user-profile" className="flex bg-white items-center font-bold hover: text-orange-500">
+      <Link to="/user-profile" className="flex bg-white items-center font-medium hover: text-black">
         User-Profile
       </Link>
-      <Button onClick={()=> logout()} className="flex items-center font-bold hover:bg-gray-500">
+      <Link to="/manage-restaurant" className="font-medium hover:text-black">
+        Manage Restaurant
+      </Link>
+      <Button onClick={() => logout()} className="flex items-center font-bold hover:bg-gray-500">
         Log Out
       </Button>
     </>

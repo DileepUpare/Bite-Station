@@ -11,7 +11,7 @@ const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu className="text-orange-500" />
+        <Menu className="text-white" />
       </SheetTrigger>
       <SheetContent className="space-y-3">
         <SheetTitle>
@@ -24,7 +24,7 @@ const MobileNav = () => {
         <Separator />
         <SheetDescription className="flex flex-col gap-4">
         {isAuthenticated? (<MobileNavLinks/>) : (
-            <Button  onClick={async()=> await loginWithRedirect()} className="flex-1 font-bold bg-orange-500">Login</Button>
+            <Button  onClick={async()=> await loginWithRedirect()} className="flex-1 font-bold bg-black">Login</Button>
           )} 
         </SheetDescription>
       </SheetContent>

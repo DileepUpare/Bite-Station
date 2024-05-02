@@ -12,7 +12,7 @@ const MainNav = () => {
         {isAuthenticated ? (
           <UsernameMenu />
         ) : (
-          <Button variant="ghost" className="font-bold hover:text-orange-500 hover:bg-white">
+          <Button variant="ghost" className="text-white font-bold hover:text-black hover:bg-white">
             <Link to="/Login" className="flex">
               Login
             </Link>

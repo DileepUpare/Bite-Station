@@ -1,9 +1,14 @@
-import Landing_Img from "../Assets/images/Landing Page.jpg"
+import loginvideo from '../Assets/videos/loginvideo.webm';
 const Hero = () => {
   return (
     <div>
-        <img src={Landing_Img} className="w-full max-h-[800px] object cover"/>
+
+      <div>
+        <video src={loginvideo} className="w-full h-full object-cover absolute z-0 top-0 left-0 " autoPlay loop muted />       
+      </div>
+
     </div>
+
   );
 };
 
