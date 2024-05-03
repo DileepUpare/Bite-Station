@@ -22,8 +22,16 @@ import Image14 from "../Assets/images/Parallax-images/pexels-valeriya-1199957.we
 import Image15 from "../Assets/images/Parallax-images/pexels-valeriya-580612.webp";
 import Image16 from "../Assets/images/Parallax-images/pexels-vince-2147491.webp";
 import Image17 from "../Assets/images/Parallax-images/pexels-vincent-ma-janssen-2302809.webp";
+import SearchBar, { SearchForm } from '@/components/SearchBar';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const handleSearchSubmit = (searchFormValues: SearchForm) =>{
+     navigate({
+       pathname: `/search/${searchFormValues.searchQuery}`,
+     })
+  }
   const containerRef = useRef<HTMLDivElement>(null!); // UseRef with type HTMLDivElement and type assertion
   const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' }); // Define media query for desktop/laptop screens
 
@@ -40,16 +48,21 @@ const HomePage = () => {
   }, [isDesktopOrLaptop]);
 
   return (
-    <div className="flex flex-col gap-12 overflow-hidden">
-      <div className="py-8 flex mt-20 md:text-center text-[2vw]">
-        <h1 className="text-2xl font-['Phonk Regular DEMO'] font-semibold uppercase text-white md:text-6xl">Welcome</h1>
+    <div className="flex flex-col items-center justify-center gap-12 overflow-hidden">
+      <div className="text-center flex-row mt-[11vw]">
+        <h1 className="text-2xl font-['Phonk Regular DEMO'] font-semibold uppercase text-white md:text-6xl"> Let's eat! Search for your favorite bites.</h1>
+        <div className="mt-12 w-[60vw] ml-40">
+          <SearchBar placeHolder='Search by Cuisine or Restaurant' onSubmit={handleSearchSubmit}/>
+        </div>
       </div>
-      <div  data-scroll data-scroll-section data-scroll-speed='.01' className="w-full rounded-tl-3xl rounded-tr-3xl bg-white mt-[128vw] md:mt-[28vw]">
+
+      <div  data-scroll data-scroll-section data-scroll-speed='.01' className="w-full rounded-tl-3xl rounded-tr-3xl bg-white mt-[128vw] md:mt-[14vw]">
         <div className="w-full text border-b-2 border-zinc-300 flex overflow-hidden whitespace-nowrap">
           <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none font-['Phonk Regular DEMO'] uppercase font-semibold pr-38">Welcome to Bite Station</motion.h1>
           <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none font-['Phonk Regular DEMO'] uppercase font-semibold pr-38">Welcome to Bite Station </motion.h1>
         </div>
       </div>
+
       <div  data-scroll  data-scroll-speed='-0.1' className="w-full p-20 bg-black rounded-3xl  text-white">
         <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">Find Restaurants which serve best food nearby you.</h1>
         {isDesktopOrLaptop && ( // Render ParallaxScroll only for desktop/laptop screens
@@ -64,8 +77,9 @@ const HomePage = () => {
           </div>
         )}
       </div>
+
       <div className="w-full p-20 bg-black rounded-tl-3xl rounded-tr-3xl text-white">
-        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">Find Restaurants which serve best food nearby you.</h1>
+        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">More than just food, it's a Bite Station community.</h1>
       </div>
     </div>
   );
