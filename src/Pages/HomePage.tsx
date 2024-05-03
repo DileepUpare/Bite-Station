@@ -48,6 +48,7 @@ const HomePage = () => {
   }, [isDesktopOrLaptop]);
 
   return (
+    <>
     <div className="flex flex-col items-center justify-center gap-12 overflow-hidden">
       <div className="text-center flex-row mt-[11vw]">
         <h1 className="text-2xl font-['Phonk Regular DEMO'] font-semibold uppercase text-white md:text-6xl"> Let's eat! Search for your favorite bites.</h1>
@@ -63,7 +64,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div  data-scroll  data-scroll-speed='-0.1' className="w-full p-20 bg-black rounded-3xl  text-white">
+      <div className="w-full p-20 bg-black rounded-3xl text-white">
+        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">More than just food, it's a Bite Station community.</h1>
+      </div>
+    </div>
+
+      <div  data-scroll  data-scroll-speed='-0.1' className="w-full p-20 bg-white rounded-3xl  text-black">
         <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">Find Restaurants which serve best food nearby you.</h1>
         {isDesktopOrLaptop && ( // Render ParallaxScroll only for desktop/laptop screens
           <div className="w-full mt-10 object-fit scroll-smooth " ref={containerRef}>
@@ -78,10 +84,8 @@ const HomePage = () => {
         )}
       </div>
 
-      <div className="w-full p-20 bg-black rounded-tl-3xl rounded-tr-3xl text-white">
-        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">More than just food, it's a Bite Station community.</h1>
-      </div>
-    </div>
+      </>
+ 
   );
 };
 
