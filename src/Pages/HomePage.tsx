@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import LocomotiveScroll from 'locomotive-scroll'; 
 
-// Import images
 import Image1 from "../Assets/images/Parallax-images/pexels-barfisch-pix-115740.webp";
 import Image2 from "../Assets/images/Parallax-images/pexels-chaitaastic-7353380.webp";
 import Image3 from "../Assets/images/Parallax-images/pexels-chinarianphotographer-9198596.webp";
@@ -22,6 +21,7 @@ import Image14 from "../Assets/images/Parallax-images/pexels-valeriya-1199957.we
 import Image15 from "../Assets/images/Parallax-images/pexels-valeriya-580612.webp";
 import Image16 from "../Assets/images/Parallax-images/pexels-vince-2147491.webp";
 import Image17 from "../Assets/images/Parallax-images/pexels-vincent-ma-janssen-2302809.webp";
+
 import SearchBar, { SearchForm } from '@/components/SearchBar';
 import { useNavigate } from 'react-router-dom';
 
@@ -32,28 +32,30 @@ const HomePage = () => {
        pathname: `/search/${searchFormValues.searchQuery}`,
      })
   }
-  const containerRef = useRef<HTMLDivElement>(null!); // UseRef with type HTMLDivElement and type assertion
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-device-width: 1224px)' }); // Define media query for desktop/laptop screens
+  const containerRef = useRef<HTMLDivElement>(null!); 
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' }); 
 
   useEffect(() => {
-    if (isDesktopOrLaptop && containerRef.current) { // Checking if containerRef.current exists
+    if (!isMobile && containerRef.current) { 
       const locomotiveScroll = new LocomotiveScroll({
-        el: containerRef.current.querySelector('[data-scroll-container]') as HTMLElement, // Use type assertion to assert it as HTMLElement
+        el: containerRef.current.querySelector('[data-scroll-container]') as HTMLElement, 
         smooth: true,
       });
       return () => {
         locomotiveScroll.destroy();
       };
     }
-  }, [isDesktopOrLaptop]);
+  }, [isMobile]);
 
   return (
     <>
     <div className="flex flex-col items-center justify-center gap-12 overflow-hidden">
-      <div className="text-center flex-row mt-[11vw]">
-        <h1 className="text-2xl font-['Phonk Regular DEMO'] font-semibold uppercase text-white md:text-6xl"> Let's eat! Search for your favorite bites.</h1>
-        <div className="mt-12 w-[60vw] ml-40">
-          <SearchBar placeHolder='Search by Cuisine or Restaurant' onSubmit={handleSearchSubmit}/>
+      <div className={`text-center flex-row ${isMobile && 'flex-col'} mt-[11vw]`}>
+        <h1 className={`text-2xl font-['Phonk Regular DEMO'] font-semibold uppercase text-white md:text-6xl ${isMobile && 'text-center'}`}>
+          Let's eat! Search for your favorite bites.
+        </h1>
+        <div className={`${isMobile ? 'mt-6' : 'mt-12'} w-full max-w-[80vw] md:max-w-[60vw] ml-auto mr-auto`}>
+          <SearchBar placeHolder='Search by City or Restaurant' onSubmit={handleSearchSubmit} mobile={isMobile} searchQuery={''}/>
         </div>
       </div>
 
@@ -65,13 +67,17 @@ const HomePage = () => {
       </div>
 
       <div className="w-full p-20 bg-black rounded-3xl text-white">
-        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">More than just food, it's a Bite Station community.</h1>
+        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">
+          More than just food, it's a Bite Station community.
+        </h1>
       </div>
     </div>
 
       <div  data-scroll  data-scroll-speed='-0.1' className="w-full p-20 bg-white rounded-3xl  text-black">
-        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">Find Restaurants which serve best food nearby you.</h1>
-        {isDesktopOrLaptop && ( // Render ParallaxScroll only for desktop/laptop screens
+        <h1 className="font-['Phonk Regular DEMO'] text-[5vw] uppercase font-semibold text-center leading-[4vw] md:text-[4vw]">
+          Find Restaurants which serve best food nearby you.
+        </h1>
+        {!isMobile && ( 
           <div className="w-full mt-10 object-fit scroll-smooth " ref={containerRef}>
             <div className="w-full">
               <ParallaxScroll 
@@ -83,9 +89,7 @@ const HomePage = () => {
           </div>
         )}
       </div>
-
-      </>
- 
+    </>
   );
 };
 
