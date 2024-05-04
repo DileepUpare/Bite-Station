@@ -4,6 +4,7 @@ import SearchResultCard from "@/components/SearchResultCard";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import searchBarImg from "../Assets/images/black image.png"
 
 export type SearchState = {
    searchQuery: string;
@@ -48,6 +49,7 @@ const SearchPage = () => {
         {results.data.map((restaurant) =>(
           <SearchResultCard restaurant={restaurant} key={restaurant._id}/>
         ))}
+        <div></div>
        </div>
     </div>
   );

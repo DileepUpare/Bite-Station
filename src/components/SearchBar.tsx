@@ -50,7 +50,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery, mobile }: Prop
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className={`flex items-center flex-1 gap-3 flex-row border-2 rounded-full p-3 mx-3 ${form.formState.errors.searchQuery && "border-red-500"
-          } bg-transparent`}
+          }`}
       >
         {!mobile && <Search strokeWidth={2.5} size={30} className="ml-1 text-white hidden md:block" />}
         <FormField
@@ -61,7 +61,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery, mobile }: Prop
               <FormControl>
                 <Input
                   {...field}
-                  className="border-none shadow-none text-xl focus-visible:ring-0 bg-transparent text-white"
+                  className="border-none shadow-none text-xl focus-visible:ring-0 text-white"
                   placeholder={placeHolder}
                 />
               </FormControl>

@@ -55,7 +55,7 @@ const HomePage = () => {
           Let's eat! Search for your favorite bites.
         </h1>
         <div className={`${isMobile ? 'mt-6' : 'mt-12'} w-full max-w-[80vw] md:max-w-[60vw] ml-auto mr-auto`}>
-          <SearchBar placeHolder='Search by City or Restaurant' onSubmit={handleSearchSubmit} mobile={isMobile} searchQuery={''}/>
+          <SearchBar placeHolder='Search by City' onSubmit={handleSearchSubmit} mobile={isMobile} searchQuery={''}/>
         </div>
       </div>
 
