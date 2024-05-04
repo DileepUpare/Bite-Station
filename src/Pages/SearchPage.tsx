@@ -4,7 +4,6 @@ import SearchResultCard from "@/components/SearchResultCard";
 import SearchResultInfo from "@/components/SearchResultInfo";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import searchBarImg from "../Assets/images/black image.png"
 
 export type SearchState = {
    searchQuery: string;
