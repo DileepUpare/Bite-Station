@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from 'react-router-dom';
 import logo from "../Assets/images/Project Logo.png";
+import { motion } from 'framer-motion';
+import { buttonClick } from '@/Animations';
 
 export function Login() {
   const { loginWithRedirect } = useAuth0();
@@ -24,11 +26,15 @@ export function Login() {
               </p>
             </div>
             <div className="mt-4 text-center text-sm">
+           
+            <motion.button {...buttonClick}>
               <Button type="submit" className="w-70 bg-black text-white ">
               <Link to="/Login" onClick={async()=> await loginWithRedirect()}>
               Get Started
               </Link>
               </Button>
+              </motion.button>
+              
             </div>
           </div>
         </div>

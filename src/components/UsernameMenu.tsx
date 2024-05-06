@@ -4,15 +4,19 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Link } from "react-router-dom";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
+import { motion } from "framer-motion";
+import { buttonClick } from "@/Animations";
 
 const UsernameMenu = () => {
     const {user, logout} = useAuth0();
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-black gap-2">
+              <motion.button {...buttonClick}>
                 <Avatar>
                     <AvatarImage src={user?.picture} />
                 </Avatar>
+               </motion.button>
 
             </DropdownMenuTrigger>
             <DropdownMenuContent>

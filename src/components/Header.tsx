@@ -5,7 +5,7 @@ import MainNav from "./MainNav";
 
 const Header = () => {
   return (
-    <div className="py-2 z-20 backdrop-filter backdrop-blur-lg">
+    <div className="py-2 z-20 backdrop-filter backdrop-blur-sm ">
         <div className="container mx-auto flex justify-between items-center px-4">
             <Link to="/" >
             <img src={HeaderLogo} className="h-10 md:h-12 mr-4" /> 
