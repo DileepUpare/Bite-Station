@@ -25,10 +25,10 @@ const ImageSection = () => {
               </AspectRatio>
             )}
             <FormField control={control} name="imageFile" render={({field})=> (
-             <FormItem>
+             <FormItem className="cursor-pointer">
                <FormControl>
                  <Input 
-                  className="bg-white" 
+                  className="bg-white cursor-pointer" 
                   type="file" 
                   accept=".jpg, .jpeg, .png" 
                   onChange={(event)=> 

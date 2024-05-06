@@ -15,7 +15,7 @@ const MainNav = () => {
           <UsernameMenu />
         ) : (
           <motion.button {...buttonClick}>
-          <Button variant="ghost" className="text-white font-bold hover:text-black hover:bg-white">
+          <Button variant="ghost" className="text-white font-bold bg-black">
             <Link to="/Login" className="flex">
               Login
             </Link>
