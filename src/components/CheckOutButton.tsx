@@ -2,7 +2,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import LoadingButton from "./LoadingButton";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
+import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, DrawerTrigger } from "./ui/drawer";
 import { ArrowUpRight } from "lucide-react";
 import UserProfileForm, { UserFormData } from "@/Forms/User-Profile-Form/UserProfileForm";
 import { useGetMyUser } from "@/api/UserApi";
@@ -51,11 +51,6 @@ const CheckOutButton = ({ onCheckout, disabled, isLoading }: Props) => {
             <DrawerDescription className="md:text-xl md:ml-9">Proceed to payment by verifying your details.</DrawerDescription>
            </DrawerHeader>
            <UserProfileForm currentUser={currentUser} onSave={onCheckout} isLoading={isGetUserLoading} title="" description=""  buttonText="Continue to payment"/>
-          <DrawerFooter>
-          <DrawerClose asChild>
-              <Button variant="outline" className=" md:w-[6vw] md:mt-[-12.7vw] md:ml-[15vw] md:h-9.6 md:z-10 mt-[-14vw] w-[20vw] ml-40">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
         </DrawerContent>
         
     </Drawer>
