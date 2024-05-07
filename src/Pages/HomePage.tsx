@@ -1,26 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive'; 
 import { motion } from "framer-motion";
-import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import LocomotiveScroll from 'locomotive-scroll'; 
 
-import Image1 from "../Assets/images/Parallax-images/pexels-barfisch-pix-115740.webp";
-import Image2 from "../Assets/images/Parallax-images/pexels-chaitaastic-7353380.webp";
-import Image3 from "../Assets/images/Parallax-images/pexels-chinarianphotographer-9198596.webp";
-import Image4 from "../Assets/images/Parallax-images/pexels-dhiraj-jain-207743066-12737656.webp";
-import Image5 from "../Assets/images/Parallax-images/pexels-marvin-ozz-1297854-2474658.webp";
-import Image6 from "../Assets/images/Parallax-images/pexels-olenkabohovyk-3819969.webp";
-import Image7 from "../Assets/images/Parallax-images/pexels-pixabay-60616.webp";
-import Image8 from "../Assets/images/Parallax-images/pexels-prabal-9609842.webp";
-import Image9 from "../Assets/images/Parallax-images/pexels-sahil-captures-424973882-17461398.webp";
-import Image10 from "../Assets/images/Parallax-images/pexels-saveurssecretes-5476229.webp";
-import Image11 from "../Assets/images/Parallax-images/pexels-saveurssecretes-5560763.webp";
-import Image12 from "../Assets/images/Parallax-images/pexels-saveurssecretes-7625056.webp";
-import Image13 from "../Assets/images/Parallax-images/pexels-shantanu-pal-938952-2679501.webp";
-import Image14 from "../Assets/images/Parallax-images/pexels-valeriya-1199957.webp";
-import Image15 from "../Assets/images/Parallax-images/pexels-valeriya-580612.webp";
-import Image16 from "../Assets/images/Parallax-images/pexels-vince-2147491.webp";
-import Image17 from "../Assets/images/Parallax-images/pexels-vincent-ma-janssen-2302809.webp";
+
 
 import SearchBar, { SearchForm } from '@/components/SearchBar';
 import { useNavigate } from 'react-router-dom';
@@ -59,7 +42,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div  data-scroll data-scroll-section data-scroll-speed='.01' className="w-full rounded-tl-3xl rounded-tr-3xl bg-white mt-[120vw] md:mt-[14vw]">
+      <div  data-scroll data-scroll-section data-scroll-speed='.01' className="w-full rounded-tl-3xl rounded-tr-3xl bg-white mt-[120vw] md:mt-[16vw]">
         <div className="w-full text border-b-2 border-zinc-300 flex overflow-hidden whitespace-nowrap">
           <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none font-['Phonk Regular DEMO'] uppercase font-semibold pr-38">Welcome to Bite Station</motion.h1>
           <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none font-['Phonk Regular DEMO'] uppercase font-semibold pr-38">Welcome to Bite Station </motion.h1>
@@ -80,11 +63,7 @@ const HomePage = () => {
         {!isMobile && ( 
           <div className="w-full mt-10 object-fit scroll-smooth " ref={containerRef}>
             <div className="w-full">
-              <ParallaxScroll 
-                images={[Image1, Image2, Image3, Image4, Image5,
-                  Image6, Image7, Image8, Image9, Image10, Image11, 
-                  Image12, Image13, Image14, Image15, Image16, Image17]}
-              />
+             
             </div>
           </div>
         )}

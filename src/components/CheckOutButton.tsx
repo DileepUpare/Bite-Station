@@ -10,9 +10,10 @@ import { useGetMyUser } from "@/api/UserApi";
 type Props = {
     onCheckout: (userFormData: UserFormData)=> void;
     disabled: boolean;
+    isLoading: boolean;
 };
 
-const CheckOutButton = ({ onCheckout, disabled }: Props) => {
+const CheckOutButton = ({ onCheckout, disabled, isLoading }: Props) => {
    const { isAuthenticated, isLoading: isAuthLoading, loginWithRedirect } = useAuth0();
   
    const { pathname } = useLocation();
@@ -33,7 +34,7 @@ const CheckOutButton = ({ onCheckout, disabled }: Props) => {
     );
    }
 
-   if(isAuthLoading || !currentUser){
+   if(isAuthLoading || !currentUser || isLoading){
       return <LoadingButton/>
    }
    
@@ -44,7 +45,7 @@ const CheckOutButton = ({ onCheckout, disabled }: Props) => {
                 Check Out <span><ArrowUpRight className="text-black hover:text-white ml-3"/></span>
             </Button>
         </DrawerTrigger>
-        <DrawerContent className="mx-auto max-w-screen h-[160vw] md:h-[46vw]">
+        <DrawerContent className="mx-auto max-w-screen h-[180vw] md:h-[46vw]">
            <DrawerHeader>
             <DrawerTitle className="md:text-5xl md:ml-8 text-xl">Confirm Delivery Details</DrawerTitle>
             <DrawerDescription className="md:text-xl md:ml-9">Proceed to payment by verifying your details.</DrawerDescription>
@@ -52,7 +53,7 @@ const CheckOutButton = ({ onCheckout, disabled }: Props) => {
            <UserProfileForm currentUser={currentUser} onSave={onCheckout} isLoading={isGetUserLoading} title="" description=""  buttonText="Continue to payment"/>
           <DrawerFooter>
           <DrawerClose asChild>
-              <Button variant="outline" className=" md:w-[6vw] md:mt-[-7.68vw] md:ml-[17.2vw] md:h-9 md:z-10 mt-[-14vw] w-[20vw] ml-40">Cancel</Button>
+              <Button variant="outline" className=" md:w-[6vw] md:mt-[-12.7vw] md:ml-[15vw] md:h-9.6 md:z-10 mt-[-14vw] w-[20vw] ml-40">Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
         </DrawerContent>
