@@ -12,7 +12,12 @@ const MainNav = () => {
     <>
       <span className="flex space-x-2 items-center">
         {isAuthenticated ? (
-          <UsernameMenu />
+          <>
+            <Link to="/order-status" className="text-white font-bold bg-black ">
+              Order Status
+              </Link>
+            <UsernameMenu />
+          </>
         ) : (
           <motion.button {...buttonClick}>
           <Button variant="ghost" className="text-white font-bold bg-black">

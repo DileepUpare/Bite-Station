@@ -9,12 +9,15 @@ const MobileNavLinks = () => {
 
   return (
     <>
-      <Link to="/home" className="font-medium hover:text-black">Home</Link>
+      <Link to="/" className="font-medium hover:text-black">Home</Link>
+      <Link to="/order-status" className="flex bg-white items-center font-medium hover:text-black">
+        Order Status
+      </Link>
       <Link to="/user-profile" className="flex bg-white items-center font-medium hover:text-black">
-        User-Profile
+        User Profile
       </Link>
       <Link to="/manage-restaurant" className="font-medium hover:text-black">
-        Manage Restaurant
+        My Restaurant
       </Link>
       <Link to="/contact" className="font-medium hover:text-black">Contact</Link>
       <Link to="/aboutus" className="font-medium hover:text-black">About Us</Link>
