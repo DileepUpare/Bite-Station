@@ -21,18 +21,18 @@ const UsernameMenu = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
             <DropdownMenuItem>
-                <Link to="/manage-restaurant" className="font-medium hover:text-black">
+                <Link to="/manage-restaurant" className="font-goliMedium hover:text-black">
                   Manage Restaurant
                 </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                <Link to="/user-profile" className="font-medium hover:text-black">
+                <Link to="/user-profile" className="font-goliMedium hover:text-black">
                   User Profile
                 </Link>
                 </DropdownMenuItem>
                 <Separator/>
                 <DropdownMenuItem>
-                    <Button onClick={()=>logout()} className="flex flex-1 font-bold bg-black">
+                    <Button onClick={()=>logout()} className="font-goliMedium flex flex-1 font-bold bg-black">
                     Log Out
                     </Button>
                 </DropdownMenuItem>

@@ -10,14 +10,14 @@ const RestaurantInfo = ({ restaurant }: Props) => {
   return (
     <Card className="md:ml-[-8vw] md:w-[58vw] md:h-[16.5vw] border-sla">
       <CardHeader>
-        <CardTitle className="md:text-5xl text-2xl font-bold tracking-tight">
+        <CardTitle className="font-goliBold md:text-5xl text-2xl font-bold tracking-tight">
           {restaurant.restaurantName}
         </CardTitle>
-        <CardDescription className="md:text-xl md:ml-2 text-[2.5vw]">
+        <CardDescription className="font-goliMedium md:text-xl md:ml-2 text-[2.5vw]">
           {restaurant.city}, {restaurant.country}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-wrap gap-2">
+      <CardContent className="font-goliMedium flex flex-wrap gap-2">
         {restaurant.cuisines.map((item, index) => (
           <span key={index} className="flex items-center">
             <span>{item}</span>

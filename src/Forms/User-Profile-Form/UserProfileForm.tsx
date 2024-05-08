@@ -39,7 +39,7 @@ const UserProfileForm = ({ onSave, isLoading, currentUser, title = "User Profile
 
    return (
          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSave)} className="space-y-4 bg-gray-50 round-lg md:p-10">
+            <form onSubmit={form.handleSubmit(onSave)} className="font-goliMedium space-y-4 bg-gray-50 round-lg md:p-10">
                <div>
                   <h2 className="text-2xl font-bold">{title}</h2>
                   <FormDescription>

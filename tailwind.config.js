@@ -17,6 +17,21 @@ module.exports = {
       },
     },
     extend: {
+
+      fontFamily: {
+         goliRegular: ['Regular'],
+         goliMedium: ['Medium'],
+         goliLight: ['Light'],
+         goliSemiBold: ['SemiBold'],
+         goliBold: ['Bold'],
+         goliVF: ['GoliExtra'],
+         phonkRegular: ['Regular'],
+         phonkContrast: ['Contrast'],
+         varien: ['Varien'],
+         meraProExtended: ['MeraPro'],
+         genesizeGrotesk: ['Genesize'],
+      },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

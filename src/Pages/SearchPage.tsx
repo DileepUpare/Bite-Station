@@ -81,7 +81,7 @@ const SearchPage = () => {
 
     return (
     <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
-       <div id="cuisines-list">
+       <div id="cuisines-list" className="font-goliMedium">
          <CuisineFilter 
            selectedCuisines={searchState.selectedCuisines}
            onChange={setSelectedCuisines}
@@ -89,12 +89,12 @@ const SearchPage = () => {
            onExpandedClick={()=> setIsExpanded((prevIsExpanded)=> !prevIsExpanded)}
            /> 
        </div>
-       <div id="main-content" className="flex flex-col gap-5">
+       <div id="main-content" className="font-goliMedium flex flex-col gap-5">
         <div></div>
         <SearchBar searchQuery={searchState.searchQuery} onSubmit={setSearchQuery} placeHolder="Search by Cuisine or Restaurant Name"
         onReset={resetSearch}/>
 
-        <div className="flex justify-between flex-col gap-3 lg:flex-row">
+        <div className="font-goliSemiBold flex justify-between flex-col gap-3 lg:flex-row">
         <SearchResultInfo total={results.pagination.total} city={city}/>
         <SortOptionDropdown sortOption={searchState.sortOption} onChange={(value)=> setSortOption(value)}/>
         </div>

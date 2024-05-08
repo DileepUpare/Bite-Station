@@ -15,7 +15,7 @@ const MobileNav = () => {
       <SheetTrigger>
         <Menu className="text-white bg-black rounded-sm h-5 w-5 mr-[-3.5vw] " />
       </SheetTrigger>
-      <SheetContent className="space-y-3">
+      <SheetContent className="font-goliSemiBold space-y-3">
         <SheetTitle>
           {isAuthenticated ? (<span className="flex items-center gap-2">
           <motion.button {...buttonClick}>

@@ -13,9 +13,9 @@ const MenuItem = ({ menuItem, addToCart }: Props) => {
     <motion.button {...buttonClick} className="text-left">
     <Card className="cursor-pointer bg-gray-100 md:ml-[-8vw]" onClick={addToCart}>
          <CardHeader>
-            <CardTitle className=" md:text-2xl">{menuItem.name}</CardTitle>
+            <CardTitle className="font-goliSemiBold md:text-2xl">{menuItem.name}</CardTitle>
          </CardHeader>
-         <CardContent className="font-bold">
+         <CardContent className=" font-goliMedium">
           ₹{(menuItem.price / 100).toFixed(2)}
          </CardContent>
     </Card>

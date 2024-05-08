@@ -20,7 +20,7 @@ export function Login() {
           <div className="mx-auto grid gap-6">
             <div className="grid gap-2 text-center">
               <img src={logo} alt="Logo" className="py-0 h-24 mx-auto" />
-              <p className="text-white">
+              <p className="font-goliSemiBold text-white text-2xl">
                 This is "Bite Station"  <br/>
                 Online Food Ordering Web Application.           
               </p>
@@ -28,7 +28,7 @@ export function Login() {
             <div className="mt-4 text-center text-sm">
            
             <motion.button {...buttonClick}>
-              <Button type="submit" className="w-70 bg-black text-white ">
+              <Button type="submit" className="font-goliMedium w-70 bg-black text-white ">
               <Link to="/Login" onClick={async()=> await loginWithRedirect()}>
               Get Started
               </Link>

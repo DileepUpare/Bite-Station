@@ -41,14 +41,14 @@ const CheckOutButton = ({ onCheckout, disabled, isLoading }: Props) => {
    return(
     <Drawer>
         <DrawerTrigger asChild>
-            <Button className="flex-1 bg-white text-black hover:text-white">
+            <Button className="font-goliMedium flex-1 bg-white text-black hover:text-white">
                 Check Out <span><ArrowUpRight className="text-black hover:text-white ml-3"/></span>
             </Button>
         </DrawerTrigger>
         <DrawerContent className="mx-auto max-w-screen h-[180vw] md:h-[46vw]">
            <DrawerHeader>
-            <DrawerTitle className="md:text-5xl md:ml-8 text-xl">Confirm Delivery Details</DrawerTitle>
-            <DrawerDescription className="md:text-xl md:ml-9">Proceed to payment by verifying your details.</DrawerDescription>
+            <DrawerTitle className="font-goliBold md:text-5xl md:ml-8 text-xl">Confirm Delivery Details</DrawerTitle>
+            <DrawerDescription className="font-goliMedium md:text-xl md:ml-9">Proceed to payment by verifying your details.</DrawerDescription>
            </DrawerHeader>
            <UserProfileForm currentUser={currentUser} onSave={onCheckout} isLoading={isGetUserLoading} title="" description=""  buttonText="Continue to payment"/>
         </DrawerContent>

@@ -1,6 +1,73 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "Regular";
+  src: local("Goli-Regular-BF663996909d710"),
+  url("./Assets/fonts/Goli-Regular-BF663996909d710.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Medium";
+  src: local("Goli-Medium-BF66399690a672c"),
+  url("./Assets/fonts/Goli-Medium-BF66399690a672c.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Light";
+  src: local("Goli-Light-BF66399690a8aa1"),
+  url("./Assets/fonts/Goli-Light-BF66399690a8aa1.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "SemiBold";
+  src: local("Goli-SemiBold-BF66399690d955e"),
+  url("./Assets/fonts/Goli-SemiBold-BF66399690d955e.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Bold";
+  src: local("Goli-Bold-BF6639968fd8e9b"),
+  url("./Assets/fonts/Goli-Bold-BF6639968fd8e9b.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "GoliExtra";
+  src: local("GoliVF-BF66399690a53c1"),
+  url("./Assets/fonts/GoliVF-BF66399690a53c1.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Regular";
+    src: local("Phonk Regular DEMO"),
+    url("./Assets/fonts/Phonk\ Regular\ DEMO.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Contrast";
+  src: local("Phonk Contrast DEMO"),
+  url("./Assets/fonts/Phonk\ Contrast\ DEMO.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Varien";
+  src: local("varien"),
+  url("./Assets/fonts/varien.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "MeraPro";
+  src: local("MeraPro-Regular-BF662a62aa77e5c"),
+  url("./Assets/fonts/MeraPro-Regular-BF662a62aa77e5c.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: "Genesize";
+  src: local("Genesize-Grotesk-Demo-BF66192a16497b2"),
+  url("./Assets/fonts/Genesize-Grotesk-Demo-BF66192a16497b2.ttf") format("truetype");
+}
+
 
   @layer base {
     :root {

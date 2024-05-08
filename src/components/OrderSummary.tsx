@@ -27,14 +27,14 @@ const OrderSummary = ({restaurant, cartItems, removeFromCart}: Props) => {
     <>
       <CardHeader>
          <CardTitle className="text-xl text-white font-bold tracking-tight justify-between" >
-           <div className="space-x-[25vw] md:space-x-[10vw]">
+           <div className="font-goliBold space-x-[25vw] md:space-x-[10vw]">
             <span>Your Order</span>
             <span>₹{getTotalCost()}</span>
            </div>
            
          </CardTitle>
       </CardHeader>
-      <CardContent className="text-white flex flex-col gap-5">
+      <CardContent className="font-goliSemiBold text-white flex flex-col gap-5">
          {cartItems.map((item)=>(
             <div className="flex justify-between">
                 <span>

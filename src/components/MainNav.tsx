@@ -13,14 +13,14 @@ const MainNav = () => {
       <span className="flex space-x-2 items-center">
         {isAuthenticated ? (
           <>
-            <Link to="/order-status" className="text-white font-bold bg-black ">
+            <Link to="/order-status" className="text-white font-goliSemiBold bg-black">
               Order Status
               </Link>
             <UsernameMenu />
           </>
         ) : (
           <motion.button {...buttonClick}>
-          <Button variant="ghost" className="text-white font-bold bg-black">
+          <Button variant="ghost" className="text-white font-goliBold bg-black">
             <Link to="/Login" className="flex">
               Login
             </Link>

@@ -14,7 +14,7 @@ const SearchResultCard = ({ restaurant }: Props) => {
                 <img src={restaurant.imageUrl} className="rounded-md w-full h-full object-cover" />
             </AspectRatio>
             <div>
-                <h3 className=" text-xl font-semibold tracking-tight mb-2 group-hover:underline">
+                <h3 className="font-goliBold text-2xl font-semibold tracking-tight mb-2 group-hover:underline">
                     {restaurant.restaurantName}
                 </h3>
                 <div id="card-content" className="grid md:grid-cols-2 gap-2">

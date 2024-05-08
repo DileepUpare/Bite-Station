@@ -30,9 +30,9 @@ const OrderStatusHeader = ({ order }: Props) => {
 
   return (
     <>
-      <h1 className="text-4xl font-bold tracking-tight flex flex-col gap-5 md:flex-row md:justify-between">
+      <h1 className="font-goliBold text-4xl font-bold tracking-tight flex flex-col gap-5 md:flex-row md:justify-between">
         <span> Order Status: {getOrderStatusInfo().label}</span>
-        <span className="text-2xl md:w-[19vw] md:mt-2 text-gray-600"> Expected by: {getExpectedDelivery()}</span>
+        <span className="font-goliMedium text-2xl md:w-[19vw] md:mt-2 text-gray-600"> Expected by: {getExpectedDelivery()}</span>
       </h1>
       <Progress
         className="animate-pulse bg-lime-600"

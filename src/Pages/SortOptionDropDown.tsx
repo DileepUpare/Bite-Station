@@ -42,7 +42,7 @@ const SortOptionDropdown = ({ onChange, sortOption }: Props) => {
         </Button>
         </motion.button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="font-goliMedium">
         {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem
             className="cursor-pointer"
