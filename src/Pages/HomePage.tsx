@@ -44,7 +44,7 @@ const HomePage = () => {
 
       <div  data-scroll data-scroll-section data-scroll-speed='.01' className="w-full rounded-tl-3xl rounded-tr-3xl bg-white mt-[120vw] md:mt-[16vw]">
         <div className="w-full text border-b-2 border-zinc-300 flex overflow-hidden whitespace-nowrap font-varien">
-          <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none uppercase font-semibold pr-38">Welcome to Bite Station</motion.h1>
+          <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none uppercase font-semibold p-38">Welcome to Bite Station</motion.h1>
           <motion.h1 initial={{ x: "0" }} animate={{ x: "-100%" }} transition={{ ease: "linear", repeat: Infinity, duration: 5 }} className="text-[15vw] leading-none uppercase font-semibold pr-38">Welcome to Bite Station </motion.h1>
         </div>
       </div>
