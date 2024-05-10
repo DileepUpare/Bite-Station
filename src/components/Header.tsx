@@ -5,10 +5,10 @@ import MainNav from "./MainNav";
 
 const Header = () => {
   return (
-    <div className="py-2 z-20 backdrop-filter backdrop-blur-sm ">
+    <div className="py-2 z-20 backdrop-filter backdrop-blur-sm mb-8">
         <div className="container mx-auto flex justify-between items-center px-4">
             <Link to="/" >
-            <img src={HeaderLogo} className="h-10 md:h-12 mr-4" /> 
+            <img src={HeaderLogo} className="md:h-12 mt-4 size-50 ml-[1vw] mr-4 h-9" /> 
             </Link>
             <div className="md:hidden">
                 <MobileNav/>

@@ -1,25 +1,23 @@
 export const ABOUTUS = [
-    { name: "Who We Are?", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Work With Us", link: "#" },
-    { name: "Contact Us", link: "#" },
+    { name: "Who We Are?", link: "/about-us" },
+    { name: "Blog", link: "/blog" },
+    { name: "Contact Us", link: "/contact-us" },
 
   ];
   export const RESTAURANTS = [
-    { name: "Build Your Restaurant", link: "#" },
-    { name: "Partner With Us", link: "#" },
+    { name: "Build Your Restaurant", link: "/manage-restaurant" },
+    { name: "Partner With Us", link: "/partner-with-us" },
     
   ];
   export const LEARNMORE = [
-    { name: "Privacy", link: "#" },
-    { name: "Security", link: "#" },
-    { name: "Terms", link: "#" },
-    { name: "Customer Reviews", link: "#" },
+    { name: "Privacy", link: "/privacy" },
+    { name: "Security", link: "/security" },
+    { name: "Terms", link: "/terms" },
 
   ];
   export const SUPPORT = [
-    { name: "Documentation", link: "#" },
-    { name: "Tutorials & guides", link: "#" },
+    { name: "Documentation", link: "/documentation" },
+    { name: "Tutorials & guides", link: "/tutorials-guides" },
     
   ];
   
