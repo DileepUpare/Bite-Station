@@ -11,7 +11,7 @@ type Props = {
 const MenuItem = ({ menuItem, addToCart }: Props) => {
    return(
     <motion.button {...buttonClick} className="text-left">
-    <Card className="cursor-pointer bg-gray-100 md:ml-[-8vw]" onClick={addToCart}>
+    <Card id="MenuItem" className="cursor-pointer bg-gray-100 md:ml-[-8vw]" onClick={addToCart}>
          <CardHeader>
             <CardTitle className="font-goliSemiBold md:text-2xl">{menuItem.name}</CardTitle>
          </CardHeader>

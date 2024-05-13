@@ -29,7 +29,7 @@ export function Login() {
             </div>
             <div className="mt-4 text-center text-sm">
             <motion.button {...buttonClick}>
-              <Button type="submit" className="font-goliMedium w-[30vw] h-[3.3vw] bg-black text-white hover:bg-white hover:text-black text-xl">
+              <Button id='GetStarted' type="submit" className="font-goliMedium w-[30vw] h-[3.3vw] bg-black text-white hover:bg-white hover:text-black text-xl">
               <Link to="/Login" onClick={async()=> await loginWithRedirect()}>
               Get Started
               </Link>

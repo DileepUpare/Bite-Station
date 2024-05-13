@@ -20,7 +20,7 @@ const MainNav = () => {
           </>
         ) : (
           <motion.button {...buttonClick}>
-          <Button variant="ghost" className="text-white font-goliBold bg-black">
+          <Button id="HomeLogin" variant="ghost" className="text-white font-goliBold bg-black">
             <Link to="/Login" className="flex">
               Login
             </Link>

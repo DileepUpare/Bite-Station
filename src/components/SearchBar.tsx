@@ -66,6 +66,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery, mobile }: Prop
                   {...field}
                   className="border-none shadow-none text-xl focus-visible:ring-0 text-cyan-600"
                   placeholder={placeHolder}
+                  id="SearchInput"
                 />
               </FormControl>
             </FormItem>
@@ -78,7 +79,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery, mobile }: Prop
         </motion.button>
 
         <motion.button {...buttonClick}>
-        <Button type="submit" className="rounded-full bg-white hover:text-white text-black">
+        <Button type="submit" id="SearchBtn" className="rounded-full bg-white hover:text-white text-black">
           Search
         </Button>
         </motion.button>
