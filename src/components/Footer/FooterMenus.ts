@@ -6,13 +6,13 @@ export const ABOUTUS = [
   ];
   export const RESTAURANTS = [
     { name: "Build Your Restaurant", link: "/manage-restaurant" },
-    { name: "Partner With Us", link: "/partner-with-us" },
+    { name: "Partner With Us", link: "/contact-us" },
     
   ];
   export const LEARNMORE = [
-    { name: "Privacy", link: "/privacy" },
-    { name: "Security", link: "/security" },
-    { name: "Terms", link: "/terms" },
+    { name: "Privacy", link: "#" },
+    { name: "Security", link: "#" },
+    { name: "Terms", link: "#" },
 
   ];
   export const SUPPORT = [
